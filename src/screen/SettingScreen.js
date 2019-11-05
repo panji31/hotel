@@ -13,25 +13,37 @@ export default class SettingScreen extends React.Component {
         };
     }
     _signOutAsync = async () => {
-        alert('ok');
         await AsyncStorage.clear();
         this.props.navigation.navigate('App');
     };
     render() {
-
         return (
-            <Container style={styles.container}>
-                <View style={styles.containerLogin}>
-                    <View
-                        style={[styles.avatar, styles.avatarContainer, { marginTop: 100 }]}>
-
-                        <Image style={styles.avatar} />
-
+            <Container style={{ flex: 1 }}>
+                <Header style={{ backgroundColor: 'white' }}>
+                    <Left>
+                        <Icon type="FontAwesome" name="gears" style={{ color: 'grey' }} />
+                    </Left>
+                    <Body style={{ alignContent: 'center', justifyContent: 'center' }}>
+                        <Title style={{ color: 'grey' }}>SETTING PROFILE</Title>
+                    </Body>
+                </Header>
+                <View style={{
+                    flex: 1,
+                    justifyContent: 'flex-start',
+                    alignItems: 'center',
+                    backgroundColor: 'white',
+                    marginTop: 20
+                }}>
+                    <Image style={styles.imageLogo} source={{ uri: 'http://192.168.0.66:5000/static/summer2.png' }} />
+                    <Text style={{ color: '#785743', textAlign: 'center', fontWeight: 'bold', fontSize: 18, marginTop: 15 }}>Admin Private Hotel</Text>
+                    <View style={{ width: '60%' }}>
+                        <Button style={{ marginTop: 20, backgroundColor: '#f06d63', borderRadius: 30 }} block onPress={this._signOutAsync}><Text style={{ textAlign: 'center' }}>LOGOUT</Text></Button>
                     </View>
-                    <View style={{ marginTop: 30 }}><Text onPress={this._signOutAsync}>Logout</Text></View>
                 </View>
+            </Container>
 
-            </Container >
+
+
         );
     }
 }

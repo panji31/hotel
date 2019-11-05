@@ -34,18 +34,24 @@ export default StyleSheet.create({
         backgroundColor: 'red'
     },
     activeRoom: {
-        justifyContent: 'flex-end',
-        borderRadius: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 10,
         padding: 10,
         height: 150,
-        backgroundColor: 'green'
+        borderWidth: 3,
+        backgroundColor: '#f5f5f5',
+        borderColor: '#f06d63',
     },
     deaactiveRoom: {
-        justifyContent: 'flex-end',
-        borderRadius: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 10,
         padding: 10,
         height: 150,
-        backgroundColor: 'grey'
+        borderWidth: 3,
+        backgroundColor: '#f5f5f5',
+        borderColor: 'grey',
     },
     allRoom: {
         justifyContent: 'flex-end',

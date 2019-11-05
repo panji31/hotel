@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
-import { Content, Container, Fab, Icon, Form, Item, Label, Input, Button, Picker, Body } from 'native-base';
+import { Content, Container, Fab, Icon, Form, Item, Label, Input, Button, Picker, Body, Header, Left, Title, Right } from 'native-base';
 import { connect } from 'react-redux'
 import styles from '../style/style';
 import { FlatGrid, SectionGrid } from 'react-native-super-grid';
@@ -53,15 +53,15 @@ class CheckinScreen extends React.Component {
             if (item.dataorder.length > 0) {
 
                 item.dataorder.forEach(function (item2) {
-                    //const next = new Date(item2.order_end_time);
+                    const next = new Date(item2.order_end_time);
 
-                    const next = new Date('2019-11-04 17:55:10');
-                    const now2 = new Date('2019-11-04 16:18:00');
+                    //const next = new Date('2019-11-04 17:55:10');
+                    //const now2 = new Date('2019-11-04 16:18:00');
+
                     //console.log('now:' + now + ' | next : ' + next);
-
                     if ((now.getTime() >= next.getTime()) && (item2.is_booked == 1)) {
                         tes();
-                        alert('update otomatis');
+                        alert('updating done');
                     }
                 })
             }
@@ -201,7 +201,15 @@ class CheckinScreen extends React.Component {
     render() {
         return (
             <Container style={styles.container}>
-                <Content>
+                <Header style={{ backgroundColor: 'white' }}>
+                    <Left>
+                        <Icon type="FontAwesome" name="check" style={{ color: 'grey' }} />
+                    </Left>
+                    <Body style={{ alignContent: 'center', justifyContent: 'center' }}>
+                        <Title style={{ color: 'grey' }}>STATUS ROOM</Title>
+                    </Body>
+                </Header>
+                <Content style={{ backgroundColor: '#6e8129' }}>
 
                     <Modal isVisible={this.state.isModalVisibleUpdate}>
                         <Form style={{ backgroundColor: 'white', paddingBottom: 10, paddingTop: 6, borderRadius: 10 }}>
@@ -275,4 +283,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(CheckinScreen); 
+)(CheckinScreen);   
