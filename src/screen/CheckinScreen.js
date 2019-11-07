@@ -240,8 +240,8 @@ class CheckinScreen extends React.Component {
                                 <Input value={this.state.duration} onChangeText={this.setDuration} editable={this.state.checkStatus} />
                             </Item>
                             <View style={{ flexDirection: 'row' }}>
-                                <Button style={{ flex: 1, margin: 10, borderRadius: 10 }} block onPress={() => { this.toggleModalUpdate(false) }} ><Text>Cancel</Text></Button>
-                                <Button style={{ flex: 1, margin: 10, borderRadius: 10 }} block onPress={this.toggleUpdate} ><Text>{this.buttonState()}</Text></Button>
+                                <Button style={{ flex: 1, margin: 10, borderRadius: 20, backgroundColor: '#f06d63' }} block onPress={() => { this.toggleModalUpdate(false) }} ><Text>Cancel</Text></Button>
+                                <Button style={{ flex: 1, margin: 10, borderRadius: 20, backgroundColor: '#f06d63' }} block onPress={this.toggleUpdate} ><Text>{this.buttonState()}</Text></Button>
                             </View>
                         </Form>
                     </Modal>

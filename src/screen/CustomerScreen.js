@@ -180,7 +180,7 @@ class CustomerScreen extends React.Component {
                         <List style={{ backgroundColor: '#f5f5f5' }}>
                             <ListItem style={{ backgroundColor: '#f5f5f5' }} onPress={() => { this.toggleModalUpdate(true, item.id.toString(), item.name.toString(), item.idcard.toString(), item.phone_number.toString()) }} avatar>
                                 <Left>
-                                    <Thumbnail source={{ uri: 'http://192.168.43.15:5000/static/' + item.image }} />
+                                    <Thumbnail source={{ uri: 'http://192.168.0.66:5000/static/' + item.image }} />
                                 </Left>
                                 <Body>
                                     <Text>Full Name : {item.name}</Text>

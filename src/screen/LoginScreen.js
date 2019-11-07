@@ -88,7 +88,7 @@ class LoginScreen extends Component {
             <Container>
                 <View style={styles.containerLogin}>
                     <Image style={styles.imageLogo}
-                        source={{ uri: 'http://192.168.0.66:5000/static/summer2.png' }}
+                        source={{ uri: 'http://192.168.0.44:5000/static/summer2.png' }}
                     />
                     <Text style={{ color: '#785743', textAlign: 'center', fontWeight: 'bold', fontSize: 23 }}>
                         Private Hotel
